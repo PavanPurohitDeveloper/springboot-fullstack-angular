@@ -1,0 +1,51 @@
+<!--
+<div *ngFor="let employee of employees">
+  <div>{{ employee.name}}</div>
+</div>
+-->
+
+<body>
+  <tr *ngFor="let employee of employees">
+    <td> {{ employee.id}}</td>
+    <td> {{ employee.name}}</td>
+    <td> {{ employee.email}}</td>
+    <td> {{ employee.jobTitle}}</td>
+    <td> {{ employee.phone}}</td>
+    <td> {{ employee.imageUrl}}</td>
+    <td> {{ employee.employeeCode}}</td>
+  </tr>
+</body>
+
+<!--
+<div class="container">
+  <div class="card">
+    <h3 class="text-center"> Employee List</h3>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <th> Id</th>
+          <th> Name</th>
+          <th> Email</th>
+          <th> job Title </th>
+          <th> Phone </th>
+          <th> imageUrl </th>
+          <th> Employee Code </th>
+        </thead>
+
+        <body>
+          <tr *ngFor="let employee of employees">
+            <td> {{ employee.id}}</td>
+            <td> {{ employee.name}}</td>
+            <td> {{ employee.email}}</td>
+            <td> {{ employee.jobTitle}}</td>
+            <td> {{ employee.phone}}</td>
+            <td> {{ employee.imageUrl}}</td>
+            <td> {{ employee.employeeCode}}</td>
+          </tr>
+        </body>
+
+      </table>
+    </div>
+  </div>
+</div>
+-->

@@ -6,6 +6,7 @@ import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -20,17 +21,20 @@ public class SwaggerConfig {
                 .select()
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
-                .build();
+                //.paths(PathSelectors.regex("/employee.*"));
+                .build()
+                .apiInfo(apiInfo());
     }
 
     private ApiInfo apiInfo() {
-        return new ApiInfoBuilder().title("MongoDB APIs")
+        return new ApiInfoBuilder()
+                .title("MongoDB APIs")
                 .description("Employee Manager APIs")
                 .version("1.0")
                 .termsOfServiceUrl("http://javainuse.com")
-                .contact("javainuse@gmail.com")
-                .license("License of API")
-                .licenseUrl("javainuse@gmail.com")
+                .contact(new Contact("employee","http://javainuse.com", "javainuse@gmail.com" ))
+                //.license("License of API")
+                //.licenseUrl("javainuse@gmail.com")
                 .build();
     }
 }
